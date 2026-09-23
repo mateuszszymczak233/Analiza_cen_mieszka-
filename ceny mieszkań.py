@@ -7,10 +7,7 @@ import sqlite3
 
 
 def month_from_filename(name: str) -> str:
-    """
-    Extract YYYY-MM from filenames like:
-    apartments_pl_2024_06.csv or apartments_pl_2023_08.csv
-    """
+    
     m = re.search(r"apartments_pl_(\d{4})_(\d{2})\.csv$", name)
     if not m:
         raise ValueError(f"Unexpected filename format: {name}")
