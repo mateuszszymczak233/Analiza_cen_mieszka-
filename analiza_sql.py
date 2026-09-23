@@ -196,7 +196,7 @@ def run_analysis():
             # Nazwa arkusza max 31 znaków (limit Excela)
             sheet = name[:31]
             df.to_excel(writer, sheet_name=sheet, index=False)
-            print(f"✓ Zakończono: {name}")
+            print(f"Zakończono: {name}")
 
     conn.close()
     print("\nRaport gotowy! Otwórz plik: Raport_Mieszkania_2024.xlsx")
