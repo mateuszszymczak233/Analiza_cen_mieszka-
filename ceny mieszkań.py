@@ -15,9 +15,7 @@ def month_from_filename(name: str) -> str:
 
 
 def to_bool_series(s: pd.Series) -> pd.Series:
-    """
-    Convert yes/no/true/false/1/0 to 1/0 (nullable).
-    """
+
     if s is None:
         return pd.Series([pd.NA] * 0, dtype="Int64")
     x = s.astype(str).str.strip().str.lower()
